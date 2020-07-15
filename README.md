@@ -1,6 +1,6 @@
 # MAT-135_Stats
 Statistics custom functions
 
-Excel: functionsTest.vba
+Excel: functionsExcel.vba
 <br />
-Google: functionTest.js
+Google: functionsGoogle.js
