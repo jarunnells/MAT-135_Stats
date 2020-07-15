@@ -1,5 +1,5 @@
 # MAT-135_Stats
-Statistics helper functions
+Statistics custom functions
 
 Excel: functionsTest.vba
 <br />
