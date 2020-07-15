@@ -63,4 +63,3 @@ function CONFIDENCE_INTERVAL(z_alpha2,phat,n,lower) {
             return phat + MARGINERROR(z_alpha2,phat,n);
     }
 }
-/**/
