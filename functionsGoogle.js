@@ -6,13 +6,8 @@
 //     License: MIT
 //
 
-/*
-    Google Sheets:
-        [1] https://www.makeuseof.com/tag/create-custom-functions-google-sheets/
-        [2] https://developers.google.com/apps-script/guides/sheets/functions
-
-        x̄  p̂  α
-*/
+// Google Sheets: https://developers.google.com/apps-script/guides/sheets/functions
+// x̄  p̂  α
 
 /* ========================== UPDATED VERSIONS ========================== */
 
