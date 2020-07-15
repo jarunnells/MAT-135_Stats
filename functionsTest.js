@@ -33,18 +33,53 @@ function PHAT(x,n) {
 }
 
 /**
+ * Calculates the margin of error [E or ME] for the mean.
+ * @constructor
+ * @param {number} t_alpha2 - t_α/2 [t sub alpha divided by 2]
+ * @param {number} s - sample standard deviation
+ * @param {number} n - sample size
+ * @return The value of t_α divided by two, then multiplied by sample standard dev divided by the square root of sample size.
+ * @customfunction
+ */
+function MARGIN_ERROR_M(t_alpha2,s,n) {
+    return t_alpha2*(s/Math.sqrt(n));
+}
+
+/**
  * Calculates the margin of error [E or ME] for a proportion.
  * @constructor
  * @param {number} z_alpha2 - z_α/2 [z sub alpha divided by 2]
  * @param {number} phat - p̂ (population proportion)
  * @param {number} n - sample size
- * @return The value of z_α divided by two, then multiplied by
+ * @return The value of z_α divided by two, then multiplied by σ_p̂
  * @customfunction
  */
-function MARGIN_ERROR(z_alpha2,phat,n) {
-    return z_alpha2*Math.sqrt((phat*(1-phat))/n);
+function MARGIN_ERROR_P(z_alpha2,phat,n) {
+  //return z_alpha2*Math.sqrt((phat*(1-phat))/n);
+  return z_alpha2*STDEV_PHAT(phat,n);
 }
 
+/**
+ * Calculates the specified upper or lower bound value.
+ * @constructor
+ * @param {number} z_alpha2 - z_α/2 [z sub alpha divided by 2]
+ * @param {number} phat - p̂ (population proportion)
+ * @param {number} n - sample size
+ * @param {boolean} lower - false for lower bound (default), true for upper bound.
+ * @return The
+ * @customfunction
+ */
+function CONFIDENCE_INTERVAL(z_alpha2,phat,n,lower=false) {
+    switch (lower) {
+        case false:
+            return phat - MARGINERROR(z_alpha2,phat,n);
+        case true:
+            return phat + MARGINERROR(z_alpha2,phat,n);
+    }
+}
+
+
+/*
 /**
  * Calculates the specified upper or lower bound value.
  * @constructor
@@ -54,7 +89,7 @@ function MARGIN_ERROR(z_alpha2,phat,n) {
  * @param {boolean} lower - true for lower bound, false for upper bound.
  * @return The
  * @customfunction
- */
+ *//*
 function CONFIDENCE_INTERVAL(z_alpha2,phat,n,lower) {
     switch (lower) {
         case true:
@@ -63,3 +98,4 @@ function CONFIDENCE_INTERVAL(z_alpha2,phat,n,lower) {
             return phat + MARGINERROR(z_alpha2,phat,n);
     }
 }
+*/
