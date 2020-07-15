@@ -9,9 +9,11 @@ Public Function STDEV_PHAT(p As Double, n As Double) As Variant
 
 End Function
 
+
 Public Function PHAT(x As Double, n As Double) As Variant
 
-    PHAT = x / n
+    x / n
+    'PHAT = x / n
 
 End Function
 
@@ -23,6 +25,7 @@ Public Function MARGINERROR_P(z_alpha2 As Double, phat As Double, n As Double) A
 
 End Function
 
+
 Public Function MARGINERROR_M(t_alpha2 As Double, s As Double, n As Double) As Variant
 
     t_alpha2 * (s / Sqr(n))
@@ -30,8 +33,22 @@ Public Function MARGINERROR_M(t_alpha2 As Double, s As Double, n As Double) As V
 
 End Function
 
+
 Public Function MARGINERROR_TEST(z_alpha2 As Double, phat As Double, n As Double) As Variant
 
     z_alpha2 * STDEV_PHAT(phat,n)
 
+End Function
+
+
+Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Double, Optional lower=FALSE As Boolean) As Variant
+
+    Select Case lower
+        Case FALSE
+            phat - MARGINERROR(z_alpha2,phat,n)
+        Case TRUE
+            phat + MARGINERROR(z_alpha2,phat,n)
+        Case Else
+            MsgBox "[ERROR] Oops, try again!"
+    End Select
 End Function
