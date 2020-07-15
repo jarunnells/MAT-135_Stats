@@ -10,7 +10,7 @@
 'Excel (VBA): https://support.microsoft.com/en-us/office/create-custom-functions-in-excel-2f06c10b-3622-40d6-a1b2-b6748ae8231f
 
 
-Public Function STDEV_PHAT(p As Double, n As Double) As Variant
+Public Function STDEV_PHAT(p As Double, n As Double) As Double
 
     Sqr((phat * (1 - phat)) / n)
     'Application.SQRT((phat * (1 - phat)) / n)
@@ -18,7 +18,7 @@ Public Function STDEV_PHAT(p As Double, n As Double) As Variant
 End Function
 
 
-Public Function PHAT(x As Double, n As Double) As Variant
+Public Function PHAT(x As Double, n As Double) As Double
 
     x / n
     'PHAT = x / n
@@ -26,7 +26,7 @@ Public Function PHAT(x As Double, n As Double) As Variant
 End Function
 
 
-Public Function MARGINERROR_P(z_alpha2 As Double, phat As Double, n As Double) As Variant
+Public Function MARGINERROR_P(z_alpha2 As Double, phat As Double, n As Double) As Double
 
     z_alpha2 * Sqr((phat * (1 - phat)) / n)
     'z_alpha2 * Application.SQRT((phat * (1 - phat)) / n)
@@ -34,7 +34,7 @@ Public Function MARGINERROR_P(z_alpha2 As Double, phat As Double, n As Double) A
 End Function
 
 
-Public Function MARGINERROR_M(t_alpha2 As Double, s As Double, n As Double) As Variant
+Public Function MARGINERROR_M(t_alpha2 As Double, s As Double, n As Double) As Double
 
     t_alpha2 * (s / Sqr(n))
     't_alpha2 * (s / Application.SQRT(n))
@@ -42,14 +42,14 @@ Public Function MARGINERROR_M(t_alpha2 As Double, s As Double, n As Double) As V
 End Function
 
 
-Public Function MARGINERROR_TEST(z_alpha2 As Double, phat As Double, n As Double) As Variant
+Public Function MARGINERROR_TEST(z_alpha2 As Double, phat As Double, n As Double) As Double
 
     z_alpha2 * STDEV_PHAT(phat,n)
 
 End Function
 
 
-Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Double, Optional lower=FALSE As Boolean) As Variant
+Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Double, Optional lower=FALSE As Boolean) As Double
 
     Select Case lower
         Case FALSE
