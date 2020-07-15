@@ -1,3 +1,10 @@
+//
+//   Developer: J.A. Runnells
+//     Updated: 2020-07-15 13:08
+//   Last Push: 2020-07-15 13:09
+//      Branch: master
+//
+
 /*
     Google Sheets:
         [1] https://www.makeuseof.com/tag/create-custom-functions-google-sheets/
@@ -6,7 +13,7 @@
         x̄  p̂  α
 */
 
-/*===========================================================================*/
+/* ========================== UPDATED VERSIONS ========================== */
 
 /**
  * Calculates standard deviation of the sampling distribution of p̂ (population proportion) from given X and n.
@@ -66,7 +73,7 @@ function MARGIN_ERROR_P(z_alpha2,phat,n) {
  * @param {number} phat - p̂ (population proportion)
  * @param {number} n - sample size
  * @param {boolean} lower - false for lower bound (default), true for upper bound.
- * @return The
+ * @return The confidence interval
  * @customfunction
  */
 function CONFIDENCE_INTERVAL(z_alpha2,phat,n,lower=false) {
@@ -77,25 +84,3 @@ function CONFIDENCE_INTERVAL(z_alpha2,phat,n,lower=false) {
             return phat + MARGINERROR(z_alpha2,phat,n);
     }
 }
-
-
-/*
-/**
- * Calculates the specified upper or lower bound value.
- * @constructor
- * @param {number} z_alpha2 - z_α/2 [z sub alpha divided by 2]
- * @param {number} phat - p̂ (population proportion)
- * @param {number} n - sample size
- * @param {boolean} lower - true for lower bound, false for upper bound.
- * @return The
- * @customfunction
- *//*
-function CONFIDENCE_INTERVAL(z_alpha2,phat,n,lower) {
-    switch (lower) {
-        case true:
-            return phat - MARGINERROR(z_alpha2,phat,n);
-        case false:
-            return phat + MARGINERROR(z_alpha2,phat,n);
-    }
-}
-*/
