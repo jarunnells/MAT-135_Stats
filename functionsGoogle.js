@@ -68,15 +68,19 @@ function MARGIN_ERROR_P(z_alpha2,phat,n) {
  * @param {number} z_alpha2 - z_α/2 [z sub alpha divided by 2]
  * @param {number} phat - p̂ (population proportion)
  * @param {number} n - sample size
- * @param {boolean} lower - false for lower bound (default), true for upper bound.
- * @return The confidence interval
+ * @param {boolean} lower - lower - true (1) for lower bound, false (0) for upper bound.
+ * @return The confidence interval ( sum of p̂ ± ME ).
  * @customfunction
  */
-function CONFIDENCE_INTERVAL(z_alpha2,phat,n,lower=false) {
+function CONFIDENCE_INTERVAL(z_alpha2,phat,n,lower) {
     switch (lower) {
-        case false:
-            return phat - MARGINERROR(z_alpha2,phat,n);
-        case true:
-            return phat + MARGINERROR(z_alpha2,phat,n);
+      case true:
+      case 1:
+          return phat - MARGINERROR(z_alpha2,phat,n);
+      case false:
+      case 0:
+          return phat + MARGINERROR(z_alpha2,phat,n);
+      default:
+          SpreadsheetApp.getUi().alert("[ERROR] Opps, try again!");
     }
 }

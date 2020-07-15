@@ -49,14 +49,17 @@ Public Function MARGINERROR_TEST(z_alpha2 As Double, phat As Double, n As Double
 End Function
 
 
-Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Double, Optional lower=FALSE As Boolean) As Double
+'Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Double, Optional lower=FALSE As Boolean) As Double
+Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Double, lower As Type) As Double
 
     Select Case lower
-        Case FALSE
-            phat - MARGINERROR(z_alpha2,phat,n)
-        Case TRUE
-            phat + MARGINERROR(z_alpha2,phat,n)
-        Case Else
-            MsgBox "[ERROR] Oops, try again!"
+        Case FALSE, 0: phat - MARGINERROR(z_alpha2,phat,n)
+        Case TRUE, 1: phat + MARGINERROR(z_alpha2,phat,n)
+        'Case FALSE: phat - MARGINERROR(z_alpha2,phat,n)
+        'Case 0: phat - MARGINERROR(z_alpha2,phat,n)
+        'Case TRUE: phat + MARGINERROR(z_alpha2,phat,n)
+        'Case 1: phat + MARGINERROR(z_alpha2,phat,n)
+        Case Else: MsgBox "[ERROR] Oops, try again!"
     End Select
+
 End Function
