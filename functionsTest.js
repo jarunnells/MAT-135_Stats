@@ -1,8 +1,9 @@
 //
 //   Developer: J.A. Runnells
-//     Updated: 2020-07-15 13:08
-//   Last Push: 2020-07-15 13:09
+//     Updated: 2020-07-15 14:20
+//   Last Push: 2020-07-15 14:20
 //      Branch: master
+//     License: MIT
 //
 
 /*

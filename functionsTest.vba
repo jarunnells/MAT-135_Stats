@@ -1,3 +1,11 @@
+'
+'    Developer: J.A. Runnells
+'      Updated: 2020-07-15 14:20
+'    Last Push: 2020-07-15 14:20
+'       Branch: master
+'      License: MIT
+'
+
 'Alt+F11 <=> Insert > Module
 'Excel (VBA): https://support.microsoft.com/en-us/office/create-custom-functions-in-excel-2f06c10b-3622-40d6-a1b2-b6748ae8231f
 
