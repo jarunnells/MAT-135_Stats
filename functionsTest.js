@@ -24,7 +24,7 @@ function PHAT(x,n) {
  * Calculates the margin of error [E or ME] for a proportion.
  * @constructor
  * @param {number} z_alpha2 - z_α/2 [z sub alpha divided by 2]
- * @param {number} phat- p̂ (population proportion)
+ * @param {number} phat - p̂ (population proportion)
  * @param {number} n - sample size
  * @return The value of z_α divided by two, then multiplied by the square root of the product of p hat and the complement of p hat divided by the sample size.
  * @customfunction
