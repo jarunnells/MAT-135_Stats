@@ -76,10 +76,10 @@ function CONFIDENCE_INTERVAL(z_alpha2,phat,n,lower) {
     switch (lower) {
       case true:
       case 1:
-          return phat - MARGINERROR(z_alpha2,phat,n);
+          return phat - MARGIN_ERROR_P(z_alpha2,phat,n);
       case false:
       case 0:
-          return phat + MARGINERROR(z_alpha2,phat,n);
+          return phat + MARGIN_ERROR_P(z_alpha2,phat,n);
       default:
           SpreadsheetApp.getUi().alert("[ERROR] Opps, try again!");
     }
