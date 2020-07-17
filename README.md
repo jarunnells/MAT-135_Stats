@@ -3,4 +3,4 @@
 
 **Excel:** *functionsExcel.vba  **DEV STATUS:** COMPLETE*
 <br />
-**Google:** *functionsGoogle.js*
+**Google:** *functionsGoogle.js  **DEV STATUS:** COMPLETE*
