@@ -29,10 +29,6 @@ Public Function MARGINERROR_M(t_alpha2 As Double, s As Double, n As Double) As D
     'MARGINERROR_M = t_alpha2 * (s / Application.SQRT(n))
 End Function
 
-Public Function MARGINERROR_TEST(z_alpha2 As Double, phat As Double, n As Double) As Double
-    MARGINERROR_TEST = z_alpha2 * STDEV_PHAT(phat,n)
-End Function
-
 Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Double, lower As Variant) As Double
 'Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Double, Optional lower=FALSE As Boolean) As Double
     'Dim ci As Double
@@ -43,3 +39,8 @@ Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Dou
     End Select
     'CONFIDENCE_INTERVAL = ci
 End Function
+
+' Under development - testing
+'Public Function MARGINERROR_TEST(z_alpha2 As Double, phat As Double, n As Double) As Double
+    'MARGINERROR_TEST = z_alpha2 * STDEV_PHAT(phat,n)
+'End Function
