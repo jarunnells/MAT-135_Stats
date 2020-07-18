@@ -22,5 +22,13 @@ namespace ExcelFunctionTest
         {
             return n1 + n2;
         }
+
+        [ExcelFunction(Description = "Calculates p̂ (population proportion) from given X and n values.")]
+        public static double PHAT(
+            [ExcelArgument(Name = "x", Description = "individuals in the sample with a specified characteristic")] double x,
+            [ExcelArgument(Name = "n", Description = "sample size")] double n)
+        {
+            return x / n;
+        }
     }
 }
