@@ -36,9 +36,9 @@ End Function
 Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Double, lower As Variant) As Double
 'Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Double, Optional lower=FALSE As Boolean) As Double
     'Dim ci As Double
-    Select Case lower
-        Case False, 0: CONFIDENCE_INTERVAL = phat - MARGINERROR_P(z_alpha2, phat, n)
-        Case True, 1: CONFIDENCE_INTERVAL = phat + MARGINERROR_P(z_alpha2, phat, n)
+    Select Case lower        
+        Case True, 1: CONFIDENCE_INTERVAL = phat - MARGINERROR_P(z_alpha2, phat, n)
+        Case False, 0: CONFIDENCE_INTERVAL = phat + MARGINERROR_P(z_alpha2, phat, n)
         Case Else: MsgBox "[ERROR] Oops, try again!"
     End Select
     'CONFIDENCE_INTERVAL = ci
