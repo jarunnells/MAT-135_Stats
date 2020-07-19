@@ -2,17 +2,6 @@
 ### Statistics custom functions
 
 <br/>**Excel:** *functionsExcel.vba*<br />
-<<<<<<< HEAD
-=======
-**DEV STATUS:** *COMPLETE*<br />
-**AVAILABLE FUNCTIONS:**<br />
-    1. `function PHAT(x, n) { ... }`  
-    2. `function STDEV_PHAT(p, n) { ... }`  
-    3. `function MARGIN_ERROR_P(z_alpha2, phat, n) { ... }`  
-    4. `function MARGIN_ERROR_M(t_alpha2, s, n) { ... }`  
-    5. `function CONFIDENCE_INTERVAL(z_alpha2, phat, n, lower) { ... }`  
-<br />**Google:** *functionsGoogle.js*<br />
->>>>>>> 891db7d18f72fa0119575edd1346ef0f35b61669
 **DEV STATUS:** *COMPLETE*<br />
 **AVAILABLE FUNCTIONS:**<br />
     1. `Function PHAT(x, n) { ... }`  
