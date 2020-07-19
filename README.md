@@ -22,3 +22,5 @@
     5. `function CONFIDENCE_INTERVAL(z_alpha2, phat, n, lower) { ... }`  
     6. `function SAMPLE_MIN_P(phat, z_alpha2, me) { ... }`  
     7. `function SAMPLE_MIN(z_alpha2, me) { ... }`  
+    8. `function PHAT_I(lower, upper) { ... }`  
+    9. `function MARGIN_ERROR_I(lower, upper) { ... }`  
