@@ -12,6 +12,7 @@
     **UNDER DEV:**<br />
     6. `Function SAMPLE_MIN_P(phat, z_alpha2, me) { ... }`  *-TESTING*  
     7. `Function SAMPLE_MIN(z_alpha2, me) { ... }`  *-TESTING*  
+    + *ExcelDNA intellisense - .NET integration*  *-TESTING*  
 <br />**Google:** *functionsGoogle.js*<br />
 **DEV STATUS:** *COMPLETE*<br />
 **AVAILABLE FUNCTIONS:**<br />
@@ -24,3 +25,5 @@
     7. `function SAMPLE_MIN(z_alpha2, me) { ... }`  
     8. `function PHAT_I(lower, upper) { ... }`  
     9. `function MARGIN_ERROR_I(lower, upper) { ... }`  
+    10. `function SAMPLE_MIN_MEAN(z_alpha2, s, me) { ... }`  
+    
