@@ -16,6 +16,6 @@
     2. `function STDEV_PHAT(p, n) { ... }`  
     3. `function MARGINERROR_P(z_alpha2, phat, n) { ... }`  
     4. `function MARGINERROR_M(t_alpha2, s, n) { ... }`  
-    5. `function CONFIDENCE_INTERVAL(z_alpha2, phat, n, lower) { ... }`
+    5. `function CONFIDENCE_INTERVAL(z_alpha2, phat, n, lower) { ... }`  
     6. `function SAMPLE_MIN_P(phat, z_alpha2, me) { ... }`  
     7. `function SAMPLE_MIN(z_alpha2, me) { ... }`  
