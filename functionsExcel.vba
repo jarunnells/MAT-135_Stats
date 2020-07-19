@@ -30,7 +30,7 @@ Public Function MARGINERROR_M(t_alpha2 As Double, s As Double, n As Double) As D
 End Function
 
 Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Double, lower As Variant) As Double
-'Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Double, Optional lower=FALSE As Boolean) As Double
+'Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Double, Optional lower As Variant = TRUE) As Double
     'Dim ci As Double
     Select Case lower        
         Case True, 1: CONFIDENCE_INTERVAL = phat - MARGINERROR_P(z_alpha2, phat, n)
