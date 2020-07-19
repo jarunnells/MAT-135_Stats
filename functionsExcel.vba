@@ -40,7 +40,13 @@ Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Dou
     'CONFIDENCE_INTERVAL = ci
 End Function
 
-' Under development - testing
-'Public Function MARGINERROR_TEST(z_alpha2 As Double, phat As Double, n As Double) As Double
-    'MARGINERROR_TEST = z_alpha2 * STDEV_PHAT(phat,n)
-'End Function
+' =============================================================================
+' UNDER DEV - NOT TESTED!!
+' =============================================================================
+Public Function SAMPLE_MIN_P(phat As Double, z_alpha2 As Double, me As Double) As Double
+    SAMPLE_MIN_P = phat*(1-phat)*Math.Pow((z_alpha2/me),2)
+End Function
+
+Public Function SAMPLE_MIN(z_alpha2 As Double, me As Double) As Double
+    SAMPLE_MIN = 0.25*Math.Pow((z_alpha2/me),2)
+End Function
