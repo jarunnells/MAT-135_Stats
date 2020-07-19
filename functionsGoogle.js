@@ -1,7 +1,7 @@
 //
 //   Developer: J.A. Runnells
-//     Updated: 2020-07-15 19:15
-//   Last Push: 2020-07-15 19:15
+//     Updated: 2020-07-18 18:15
+//   Last Push: 2020-07-18 18:15
 //      Branch: master
 //     License: MIT
 //
@@ -84,3 +84,29 @@ function CONFIDENCE_INTERVAL(z_alpha2,phat,n,lower) {
           SpreadsheetApp.getUi().alert("[ERROR] Opps, try again!");
     }
 }
+
+/**
+ * Estimates population proportion using prior estimate (p̂).
+ * @constructor
+ * @param {number} phat - p̂ (population proportion)
+ * @param {number} z_alpha2 - z_α/2 [z sub alpha divided by 2]
+ * @param {number} me - margin of error
+ * @return The product of p̂, p̂', and the result of z_α/2 divided by the margin of error squared.
+ * @customfunction
+ */
+ function SAMPLE_MIN_P(phat,z_alpha2,me) {
+     return phat*(1-phat)*Math.pow((z_alpha2/me),2)
+ }
+
+ /**
+  * Estimates population proportion without a prior estimate.
+  * @constructor
+  * @param {number} z_alpha2 - z_α/2 [z sub alpha divided by 2]
+  * @param {number} me - margin of error
+  * @return The product of 0.25 and z_α/2 divided by the margin of error squared.
+  * @customfunction
+  */
+function SAMPLE_MIN(z_alpha2,me) {
+    return 0.25*Math.pow((z_alpha2/me),2)
+}
+ 
