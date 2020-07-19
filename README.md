@@ -9,6 +9,9 @@
     3. `Function MARGIN_ERROR_P(z_alpha2, phat, n) { ... }`  
     4. `Function MARGIN_ERROR_M(t_alpha2, s, n) { ... }`  
     5. `Function CONFIDENCE_INTERVAL(z_alpha2, phat, n, lower) { ... }`  
+    **UNDER DEV:**<br />
+    6. `Function SAMPLE_MIN_P(phat, z_alpha2, me) { ... }`  *-TESTING*  
+    7. `Function SAMPLE_MIN(z_alpha2, me) { ... }`  *-TESTING*  
 <br />**Google:** *functionsGoogle.js*<br />
 **DEV STATUS:** *COMPLETE*<br />
 **AVAILABLE FUNCTIONS:**<br />
