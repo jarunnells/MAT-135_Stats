@@ -36,6 +36,18 @@ function PHAT(x,n) {
 }
 
 /**
+ * Calculates p̂ (sample proportion) given upper and lower bounds.
+ * @constructor
+ * @param {number} lower - lower bounds value
+ * @param {number} upper - upper bounds value
+ * @return The value of upper and lower bounds divided by two
+ * @customfunction
+ */
+function PHAT_I(lower,upper) {
+    return (lower+upper)/2;
+}
+
+/**
  * Calculates the margin of error [E or ME] for the mean.
  * @constructor
  * @param {number} t_alpha2 - t_α/2 [t sub alpha divided by 2]
@@ -60,6 +72,18 @@ function MARGIN_ERROR_M(t_alpha2,s,n) {
 function MARGIN_ERROR_P(z_alpha2,phat,n) {
   //return z_alpha2*Math.sqrt((phat*(1-phat))/n);
   return z_alpha2*STDEV_PHAT(phat,n);
+}
+
+/**
+ * Calculates the margin of error given upper and lower bounds.
+ * @constructor
+ * @param {number} lower - lower bounds value
+ * @param {number} upper - upper bounds value
+ * @return The difference between upper and lower bounds divided by two
+ * @customfunction
+ */
+function MARGIN_ERROR_I(lower,upper) {
+    return Math.abs(lower-upper)/2;
 }
 
 /**
