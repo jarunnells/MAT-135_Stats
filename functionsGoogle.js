@@ -1,7 +1,7 @@
 //
 //   Developer: J.A. Runnells
-//     Updated: 2020-07-18 18:15
-//   Last Push: 2020-07-18 18:15
+//     Updated: 2020-07-19 04:30
+//   Last Push: 2020-07-19 04:30
 //      Branch: master
 //     License: MIT
 //
@@ -9,10 +9,12 @@
 // Google Sheets: https://developers.google.com/apps-script/guides/sheets/functions
 // x̄  p̂  α
 
-/* ========================== UPDATED VERSIONS ========================== */
+// =============================================================================
+// FUNCTIONS: [x] COMPLETE  [x] TESTED
+// =============================================================================
 
 /**
- * Calculates standard deviation of the sampling distribution of p̂ (population proportion) from given X and n.
+ * Calculates standard deviation of the sampling distribution of p̂ (population proportion).
  * @constructor
  * @param {number} p - population proportion.
  * @param {number} n - sample size
@@ -119,7 +121,7 @@ function CONFIDENCE_INTERVAL(z_alpha2,phat,n,lower=true) {
  * @customfunction
  */
  function SAMPLE_MIN_P(phat,z_alpha2,me) {
-     return phat*(1-phat)*Math.pow((z_alpha2/me),2)
+     return phat*(1-phat)*Math.pow((z_alpha2/me),2);
  }
 
  /**
@@ -131,6 +133,19 @@ function CONFIDENCE_INTERVAL(z_alpha2,phat,n,lower=true) {
   * @customfunction
   */
 function SAMPLE_MIN(z_alpha2,me) {
-    return 0.25*Math.pow((z_alpha2/me),2)
+    return 0.25*Math.pow((z_alpha2/me),2);
+}
+
+ /**
+  * Estimates population mean.
+  * @constructor
+  * @param {number} z_alpha2 - z_α/2 [z sub alpha divided by 2]
+  * @param {number} s - sample standard deviation
+  * @param {number} me - margin of error
+  * @return The product of z_α/2 and s divided by the margin of error squared.
+  * @customfunction
+  */
+function SAMPLE_MIN_MEAN(z_alpha2,s,me) {
+    return Math.pow((z_alpha2*s/me),2);
 }
  
