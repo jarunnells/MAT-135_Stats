@@ -6,6 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using ExcelDna.Integration;
 
+/*
+ *
+ *      Developer: J.A. Runnells
+ *      Branch: master
+ *      Updated: 2020-07-20 05:29
+ *      
+ *
+ */
+
 namespace ExcelFunctionTest
 {
     public static class ExcelFunctions
