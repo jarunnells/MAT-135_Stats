@@ -71,5 +71,63 @@ namespace ExcelFunctionTest
         {
             return 0;
         }
+
+        public static string TestDefault(object nameArg)
+        {
+            string name = Optional.Check(nameArg, " Unknown Person!?");
+            return $"Hello {name}";
+        }
+    }
+
+    // Helper Class - Optionals
+    internal static class Optional
+    {
+        internal static bool Check(object arg, bool defaultVal)
+        {
+            return defaultVal;
+        }
+
+        internal static int Check(object arg, int defaultVal)
+        {
+            if (arg is int)
+                return (int)arg;
+            else if (arg is ExcelMissing)
+                return defaultVal;
+            else
+                throw new ArgumentException();
+        }
+
+        internal static double Check(object arg, double defaultVal)
+        {
+            if (arg is double)
+                return (double)arg;
+            else if (arg is ExcelMissing)
+                return defaultVal;
+            else
+                throw new ArgumentException();
+        }
+
+        // TODO: add more type checks 
+        internal static string Check(object arg, string defaultVal)
+        {
+            if (arg is string)
+                return (string)arg;
+            else if (arg is ExcelMissing)
+                return defaultVal;
+            else
+                return arg.ToString();
+        }
+
+        internal static DateTime Check(object arg, DateTime defaultVal)
+        {
+            if (arg is double)
+                return DateTime.FromOADate((double)arg);
+            else if (arg is string)
+                return DateTime.Parse((string)arg);
+            else if (arg is ExcelMissing)
+                return defaultVal;
+            else
+                throw new ArgumentException();
+        }
     }
 }
