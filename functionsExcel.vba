@@ -19,11 +19,11 @@ Public Function PHAT(x As Double, n As Double) As Double
 End Function
 ' Calculates standard deviation of the sampling distribution of p̂ (population proportion).
 Public Function STDEV_PHAT(phat As Double, n As Double) As Double
-    STDEV_PHAT = Sqr((phat * (1 - phat)) / n)
+    STDEV_PHAT = Sqr(phat * (1 - phat) / n)
 End Function
 ' Calculates the margin of error [E or ME] for a proportion.
 Public Function MARGINERROR_P(z_alpha2 As Double, phat As Double, n As Double) As Double
-    MARGINERROR_P = z_alpha2 * Sqr((phat * (1 - phat)) / n)
+    MARGINERROR_P = z_alpha2 * Sqr(phat * (1 - phat) / n)
 End Function
 ' Calculates the margin of error [E or ME] for the mean.
 Public Function MARGINERROR_M(t_alpha2 As Double, s As Double, n As Double) As Double
