@@ -14,7 +14,7 @@ Public Function PHAT(x As Double, n As Double) As Double
     PHAT = x / n
 End Function
 
-Public Function STDEV_PHAT(p As Double, n As Double) As Double
+Public Function STDEV_PHAT(phat As Double, n As Double) As Double
     STDEV_PHAT = Sqr((phat * (1 - phat)) / n)
     'STDEV_PHAT = Application.SQRT((phat * (1 - phat)) / n)
 End Function
