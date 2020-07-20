@@ -16,11 +16,11 @@ namespace ExcelFunctionTest
         }
 
         [ExcelFunction(Description = ".NET Function Test - AddNums(n1,n2)")]
-        public static double AddNums(
-            [ExcelArgument(Name = "num1", Description = "First number to add")] double n1,
-            [ExcelArgument(Name = "num2", Description = "Second number to add")] double n2)
+        public static double MINUS(
+            [ExcelArgument(Name = "num1", Description = "Number to subtract from.")] double n1,
+            [ExcelArgument(Name = "num2", Description = "Number being subtracted.")] double n2)
         {
-            return n1 + n2;
+            return n1 - n2;
         }
 
         [ExcelFunction(Description = "Calculates p̂ (population proportion) from given X and n values.")]
@@ -29,6 +29,14 @@ namespace ExcelFunctionTest
             [ExcelArgument(Name = "n", Description = "sample size")] double n)
         {
             return x / n;
+        }
+
+        [ExcelFunction(Description ="Calculates standard deviation of phat")]
+        public static double STDEV_PHAT(
+            [ExcelArgument(Name = "phat", Description = "phat value description")] double phat,
+            [ExcelArgument(Name = "n", Description = "sample size description")] double n)
+        {
+            return Math.Sqrt(phat * (1 - phat) / n);
         }
     }
 }
