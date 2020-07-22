@@ -54,11 +54,11 @@ End Function
 ' --------------------------------  UNDER DEV  --------------------------------
 ' =============================================================================
 ' Estimates population proportion using prior estimate (p̂).
-Public Function SAMPLE_MIN_P(phat As Double, z_alpha2 As Double, me As Double) As Double
-    SAMPLE_MIN_P = phat*(1-phat)*Math.Pow((z_alpha2/me),2)
+Public Function SAMPLE_MIN_P(phat As Double, z_alpha2 As Double, m_err As Double) As Double
+    SAMPLE_MIN_P = phat*(1-phat)*Math.Pow((z_alpha2/m_err),2)
 End Function
 ' Estimates population proportion without a prior estimate.
-Public Function SAMPLE_MIN(z_alpha2 As Double, me As Double) As Double
+Public Function SAMPLE_MIN(z_alpha2 As Double, m_err As Double) As Double
     SAMPLE_MIN = 0.25*Math.Pow((z_alpha2/me),2)
 End Function
 ' Calculates the specified upper or lower bound value <=> REFACTOR: DEFAULT VALUE ADDED
@@ -78,6 +78,6 @@ Public Function MARGINERROR_I(lower As Double, upper As Double) As Double
     MARGINERROR_I = Math.Abs(lower-upper)/2
 End Function
 ' Estimates population mean.
-Public Function SAMPLE_MIN_MEAN(z_alpha2 As Double, s As Double, me As Double) As Double
-    SAMPLE_MIN_MEAN = Math.Pow((z_alpha2*s/me),2)
+Public Function SAMPLE_MIN_MEAN(z_alpha2 As Double, s As Double, m_err As Double) As Double
+    SAMPLE_MIN_MEAN = Math.Pow((z_alpha2*s/m_err),2)
 End Function
