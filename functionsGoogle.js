@@ -1,7 +1,7 @@
 //
 //   Developer: J.A. Runnells
-//     Updated: 2020-07-19 04:30
-//   Last Push: 2020-07-19 04:30
+//     Updated: 2020-07-22 00:45
+//   Last Push: 2020-07-22 00:45
 //      Branch: master
 //     License: MIT
 //
@@ -10,7 +10,17 @@
 // x̄  p̂  α
 
 // =============================================================================
-// FUNCTIONS: [x] COMPLETE  [x] TESTED
+// AVAILABLE FUNCTIONS (JS):
+//   [01] STDEV_PHAT() <=> [x] TESTING  [x] DEV COMPLETE
+//   [02] PHAT() <=> [x] TESTING  [x] DEV COMPLETE
+//   [03] PHAT_I() <=> [x] TESTING  [x] DEV COMPLETE
+//   [04] MARGINERROR_M() <=> [x] TESTING  [x] DEV COMPLETE
+//   [05] MARGINERROR_P() <=> [x] TESTING  [x] DEV COMPLETE
+//   [06] MARGINERROR_I() <=> [x] TESTING  [x] DEV COMPLETE
+//   [07] CONFIDENCE_INTERVAL() <=> [x] TESTING  [x] DEV COMPLETE
+//   [08] SAMPLE_MIN_P() <=> [x] TESTING  [x] DEV COMPLETE
+//   [09] SAMPLE_MIN() <=> [x] TESTING  [x] DEV COMPLETE
+//   [10] SAMPLE_MIN_MEAN() <=> [x] TESTING  [x] DEV COMPLETE
 // =============================================================================
 
 /**

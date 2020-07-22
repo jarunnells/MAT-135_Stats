@@ -6,14 +6,28 @@ using System.Text;
 using System.Threading.Tasks;
 using ExcelDna.Integration;
 
-/*
- *
- *      Developer: J.A. Runnells
- *      Branch: master
- *      Updated: 2020-07-20 05:29
- *      
- *
- */
+
+//
+//   Developer: J.A. Runnells
+//     Updated: 2020-07-22 00:45
+//   Last Push: 2020-07-22 00:45
+//      Branch: master
+//     License: MIT
+//
+
+// =============================================================================
+// AVAILABLE FUNCTIONS (C#):
+//   [01] SayHello() <=> [x] TESTING  [x] DEV COMPLETE  **TESTING ONLY**
+//   [02] MINUS() <=> [x] TESTING  [ ] DEV COMPLETE
+//   [03] PHAT() <=> [x] TESTING  [ ] DEV COMPLETE
+//   [04] STDEV_PHAT() <=> [x] TESTING  [ ] DEV COMPLETE
+//   [05] MARGINERROR_P() <=> [x] TESTING  [ ] DEV COMPLETE
+//   [06] MARGINERROR_M() <=> [x] TESTING  [ ] DEV COMPLETE
+//   [07] CONFIDENCE_INTERVAL() <=> [x] TESTING  [ ] DEV COMPLETE
+//   [08] TestDefault() <=> [x] TESTING  [ ] DEV COMPLETE
+//
+//   [**] Internal (helper) Class Optional <=> [x] TESTING  [ ] DEV COMPLETE
+// =============================================================================
 
 namespace ExcelFunctionTest
 {

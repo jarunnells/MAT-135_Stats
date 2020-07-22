@@ -1,7 +1,7 @@
 '
 '    Developer: J.A. Runnells
-'      Updated: 2020-07-20 01:30
-'    Last Push: 2020-07-20 01:30
+'      Updated: 2020-07-22 00:45
+'    Last Push: 2020-07-22 00:45
 '       Branch: master
 '      License: MIT
 '
@@ -11,8 +11,20 @@
 ' Application.SQRT()
 
 ' =============================================================================
-' FUNCTIONS: [x] COMPLETE  [x] TESTED
+' AVAILABLE FUNCTIONS (VBA):
+'   [01] PHAT() <=> [x] TESTING  [x] DEV COMPLETE
+'   [02] STDEV_PHAT() <=> [x] TESTING  [x] DEV COMPLETE
+'   [03] MARGINERROR_P() <=> [x] TESTING  [x] DEV COMPLETE
+'   [04] MARGINERROR_M() <=> [x] TESTING  [x] DEV COMPLETE
+'   [05] CONFIDENCE_INTERVAL() <=> [x] TESTING  [x] DEV COMPLETE
+'   [06] SAMPLE_MIN_P() <=> [x] TESTING  [ ] DEV COMPLETE
+'   [07] SAMPLE_MIN() <=> [x] TESTING  [ ] DEV COMPLETE
+'   [08] CONFIDENCE_INTERVAL_DEFAULT_TEST() <=> [x] TESTING  [ ] DEV COMPLETE
+'   [09] PHAT_I() <=> [x] TESTING  [ ] DEV COMPLETE
+'   [10] MARGINERROR_I() <=> [x] TESTING  [ ] DEV COMPLETE
+'   [11] SAMPLE_MIN_MEAN() <=> [x] TESTING  [ ] DEV COMPLETE
 ' =============================================================================
+
 ' Calculates p̂ (population proportion) from given X and n.
 Public Function PHAT(x As Double, n As Double) As Double
     PHAT = x / n
@@ -39,7 +51,7 @@ Public Function CONFIDENCE_INTERVAL(z_alpha2 As Double, phat As Double, n As Dou
 End Function
 
 ' =============================================================================
-' UNDER DEV - NOT TESTED!!
+' --------------------------------  UNDER DEV  --------------------------------
 ' =============================================================================
 ' Estimates population proportion using prior estimate (p̂).
 Public Function SAMPLE_MIN_P(phat As Double, z_alpha2 As Double, me As Double) As Double
