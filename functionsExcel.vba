@@ -57,3 +57,15 @@ Public Function CONFIDENCE_INTERVAL_DEFAULT_TEST(z_alpha2 As Double, phat As Dou
         Case Else: MsgBox "[ERROR] Oops, try again!"
     End Select
 End Function
+' Calculates p̂ (sample proportion) given upper and lower bounds.
+Public Function PHAT_I(lower As Double, upper As Double) As Double
+    PHAT_I = (lower+upper)/2
+End Function
+' Calculates the margin of error given upper and lower bounds.
+Public Function MARGINERROR_I(lower As Double, upper As Double) As Double
+    MARGINERROR_I = Math.Abs(lower-upper)/2
+End Function
+' Estimates population mean.
+Public Function SAMPLE_MIN_MEAN(z_alpha2 As Double, s As Double, me As Double) As Double
+    SAMPLE_MIN_MEAN = Math.Pow((z_alpha2*s/me),2)
+End Function
